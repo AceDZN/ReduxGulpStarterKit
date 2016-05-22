@@ -3,15 +3,14 @@ import {connect} from 'react-redux';
 
 class GreetMessage extends Component{
   render(){
-    if(!this.props.platform){
-      return (
-        <div>Hello _______!</div>
-      )
+    var greet = "Hello ______!";
+    if(this.props.platform){
+      greet = "Hello "+this.props.platform.title+"!";
     }
-    return(
-      <div>
-        Hello {this.props.platform.title}!
-      </div>
+    return (
+      <h1 className="greet-message">
+        {greet}
+      </h1>
     )
   }
 
