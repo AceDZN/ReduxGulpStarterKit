@@ -7,7 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <ForkBanner />
+        <ForkBanner url="https://github.com/AceDZN/ReduxGulpStarterKit" />
         <GreetMessage />
         <PlatformList />
       </div>
