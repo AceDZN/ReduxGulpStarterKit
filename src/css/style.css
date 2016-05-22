@@ -18,4 +18,15 @@ ul.list-group {
     padding: 10px;
     background: #FFEB3B;
     margin: 0 5px;
-    transform: skewY(2deg) skewX(2deg); }
+    transform: skewX(7deg) skewY(2deg); }
+
+.fork-me {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  max-width: 50%;
+  cursor: pointer; }
+  .fork-me img {
+    max-width: 100%;
+    cursor: pointer; }
