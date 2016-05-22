@@ -4,7 +4,7 @@
   "description": "React, Redux, Gulp Boilerplate",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha --require babel-core/register --reporter dot test/**/*_test.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,8 @@
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.3.0",
     "browserify": "*",
+    "expect": "^1.20.1",
+    "expect.js": "^0.3.1",
     "gulp": "^3.9.1",
     "gulp-concat": "*",
     "gulp-cssnano": "*",
@@ -36,18 +38,17 @@
     "gulp-server-livereload": "*",
     "gulp-uglify": "*",
     "gulp-util": "*",
+    "mocha": "^2.4.5",
     "object-assign": "*",
+    "react-addons-test-utils": "^15.1.0",
     "reactify": "*",
     "vinyl-source-stream": "*",
     "watchify": "*"
   },
   "dependencies": {
-    "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
-    "react-router": "^2.0.1",
-    "redux": "^3.0.4",
-    "whatwg-fetch": "^1.0.0"
+    "redux": "^3.0.4"
   }
 }

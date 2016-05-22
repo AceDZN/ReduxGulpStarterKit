@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {selectPlatform} from '../actions/index';
 import {bindActionCreators} from 'redux';
 
-
 class PlatformsList extends Component {
   renderList(){
     return this.props.platforms.map((platform)=>{
