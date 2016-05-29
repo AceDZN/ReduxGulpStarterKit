@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/AceDZN/ReduxGulpStarterKit.svg?branch=master)](https://travis-ci.org/AceDZN/ReduxGulpStarterKit)
 # ReduxGulpStarterKit
 React, Redux, Gulp Boilerplate
 
