@@ -2,12 +2,12 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var watchify = require('watchify');
 var browserify = require('browserify');
-var reactify = require('reactify'); //JSX 2 JS
-var source = require('vinyl-source-stream'); //String 2 Stream
-
+var reactify = require('reactify');
+var source = require('vinyl-source-stream');
 var server = require('gulp-server-livereload');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 
 var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
@@ -75,20 +75,24 @@ gulp.task('apply-prod-environment', function() {
 });
 gulp.task('compress', function() {
  return gulp.src('dist/js/main.js')
+   .pipe(sourcemaps.init())
    .pipe(uglify().on('error', function(){
      gutil.log("error with COMPRESSION")
    }))
    .pipe(rename({suffix:'.min'}))
+   .pipe(sourcemaps.write('.'))
    .pipe(gulp.dest('dist/js/'));
  });
 
 gulp.task('sass', function(){
   gulp.src('src/scss/*.*')
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))
     .pipe(gulp.dest('src/css'))
     .pipe(cssnano())
     .pipe(rename({ suffix: '.min' }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('src/css'));
 });
 

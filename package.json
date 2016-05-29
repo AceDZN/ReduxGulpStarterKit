@@ -36,6 +36,7 @@
     "gulp-rename": "*",
     "gulp-sass": "*",
     "gulp-server-livereload": "*",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "*",
     "gulp-util": "*",
     "mocha": "^2.4.5",
