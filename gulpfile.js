@@ -136,6 +136,7 @@ gulp.task("serve", ["copy"], function(done) {
     .pipe(gulp.dest("dist/css"));
   gulp.src("dist")
     .pipe(server({
+      port: 9000,
       livereload: {
         enable: true,
         filter: function(filePath, cb) {
